@@ -5,7 +5,8 @@ export const Navbar = styled.nav`
   align-items: center;
   justify-content: space-around;
   height: 8vh;
-  background: rgb(0, 25, 70);
+  background: rgb(9,9,58);
+  background: linear-gradient(0deg, rgba(9,9,58,1) 0%, rgba(0,68,197,1) 100%);
 
   li {
     list-style: none;
@@ -13,17 +14,20 @@ export const Navbar = styled.nav`
 
   a {
     text-decoration: none;
-    color: darkgray;
+    color: #FFF;
   }
 
   Link {
     text-decoration: none;
-    color: darkgray;
+    color: #FFF;
   }
 
   .nav__brand{
     text-transform: uppercase;
+    color: white;
+    text-shadow: 1px 2px #5296ff;
     font-weight: bold;
+    font-size: 2rem !important;
   }
 
   .nav__menu{

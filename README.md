@@ -15,7 +15,7 @@
 4. Se estiver errado, retorna msg de erro
 
 ## DESLOGAR
-1. Apago a referência que existir no browser;
+1. Apagar a referência que existir no browser;
     1.1 Enviar uma requisição para o backend para destruir aquela referencia.
 2. Atualizo a página
 
