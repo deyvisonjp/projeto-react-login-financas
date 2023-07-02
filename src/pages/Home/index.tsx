@@ -5,6 +5,7 @@ import { itens } from '../../data/itens';
 import { filterListByMonth, getCurrentMonth } from '../../utils/dateFilter';
 import { Item } from '../../types/Item';
 import { TableArea } from '../../components/TableArea'
+import { InfoArea } from '../../components/InfoArea';
 
 export const Home = () => {
 
@@ -17,6 +18,9 @@ export const Home = () => {
         setFilteredList(filterListByMonth(list, currentMonth));
     }, [list, currentMonth])
 
+    const handleMonthChange = (newMonth: string) => {
+        setCurrentMonth(newMonth);
+    }
 
     return (
         <>
@@ -28,9 +32,13 @@ export const Home = () => {
         <C.Body>
 
             {/* Momento atual do vídeo
-            https://youtu.be/_hytKpMc04E?t=2877 */}
+            https://youtu.be/_hytKpMc04E?t=5894 */}
 
             {/* Área de informações */}
+            <InfoArea 
+                currentMonth={currentMonth} 
+                onMonthChange={handleMonthChange}
+            />
 
             {/* Área de inserção */}
 

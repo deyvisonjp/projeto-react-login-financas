@@ -29,3 +29,12 @@ export const formatDate = (date: Date): string => {
 }
 
 const addZeroToDate = (n: number): string => n < 10 ? `0${n}` : `${n}`;
+
+export const formatCurrentMonth = (getCurrentMonth: string) : string => {
+    let [year, month] = getCurrentMonth.split('-');
+
+    let months = ['Mes', 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Novembro', 'Dezembro'];
+
+    return `${months[parseInt(month)]} ${year}`
+
+}
