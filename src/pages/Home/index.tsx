@@ -7,6 +7,7 @@ import { Item } from '../../types/Item';
 import { TableArea } from '../../components/TableArea'
 import { InfoArea } from '../../components/InfoArea';
 import { categories } from '../../data/categories';
+import { InputArea } from '../../components/InputArea/index';
 
 export const Home = () => {
 
@@ -42,6 +43,12 @@ export const Home = () => {
         setCurrentMonth(newMonth);
     }
 
+    const handleAddItem = (item: Item) => {
+        let newList = [...list];
+        newList.push(item);
+        setList(newList);
+    }
+
     return (
         <>
         <C.Header>
@@ -52,7 +59,7 @@ export const Home = () => {
         <C.Body>
 
             {/* Momento atual do vídeo
-            https://youtu.be/_hytKpMc04E?t=5894 */}
+            https://youtu.be/_hytKpMc04E?t=6824 */}
 
             {/* Área de informações */}
             <InfoArea 
@@ -62,7 +69,9 @@ export const Home = () => {
                 expense={expense}
             />
 
-            {/* Área de inserção */}
+            {/* Área de inserção (data/categoria/titulo/valor)*/}
+            <InputArea onAdd={handleAddItem}/>
+            
 
             {/* Tabela de itens */}
             <TableArea list={filteredList}/>
